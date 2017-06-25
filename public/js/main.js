@@ -10,13 +10,13 @@ for (let li of nav) {
     li.addEventListener('click', navSection);
 }
 
-let coorientador = document.getElementById('cb-coorientador');
+/*let coorientador = document.getElementById('cb-coorientador');
 coorientador.addEventListener('click', function () {
     if (coorientador.checked) {
         document.getElementById('box-coorientador').classList.remove('hidden');
     } else
         document.getElementById('box-coorientador').classList.add('hidden');
-});
+});*/
 
 var calendar = $('#calendar').fullCalendar({
     selectable: true,
