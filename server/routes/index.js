@@ -6,7 +6,6 @@ let db = require('../../db');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	let calendar = '<p>1</p>'  
 /*var events = [];
 	var calendar = fullCalendar({
     selectable: true,
@@ -24,7 +23,7 @@ router.get('/', function(req, res, next) {
         calendar.fullCalendar('unselect');
     }
 });*/
-  res.render('index',{calendar});
+  res.render('index');
 });
 
 router.get('/agendamento', function(req, res, next){

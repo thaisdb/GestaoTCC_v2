@@ -15,7 +15,8 @@
     "express": "^4.15.3",
     "fullcalendar": "^3.4.0",
     "moment": "^2.18.1",
-    "mysql": "^2.13.0"
+    "mysql": "^2.13.0",
+    "underscore": "^1.8.3"
   },
   "description": "Trabalho final de Web",
   "private": true,

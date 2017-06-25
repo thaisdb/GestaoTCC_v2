@@ -1,5 +1,4 @@
 
-let fullcalendar = require('fullcalendar');
 
 function navSection() {
     event.target.parentNode.classList.add('active');
@@ -19,6 +18,22 @@ coorientador.addEventListener('click', function () {
         document.getElementById('box-coorientador').classList.add('hidden');
 });
 
+var calendar = $('#calendar').fullCalendar({
+    selectable: true,
+    select: function(start, end, allDay) {
+        var title = prompt('New event:');
+        if (title) {
+            calendar.fullCalendar('renderEvent', {
+                title   : title,
+                start   : start,
+                end     : end,
+                allDay  : allDay
+            },
+            true);
+        }
+        calendar.fullCalendar('unselect');
+    }
+});
 
 
 
