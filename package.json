@@ -1,0 +1,36 @@
+{
+  "name": "gest_otcc",
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "rapha",
+  "contributors": [],
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "fullcalendar": "^3.4.0",
+    "moment": "^2.18.1",
+    "mysql": "^2.13.0"
+  },
+  "description": "Trabalho final de Web",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thaisdb/tpWeb.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thaisdb/tpWeb/issues"
+  },
+  "homepage": "https://github.com/thaisdb/tpWeb#readme"
+}

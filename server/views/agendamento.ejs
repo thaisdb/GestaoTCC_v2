@@ -1,0 +1,39 @@
+<% include head.ejs%>
+<div class="active container container-fluid hidden" id="agendamento">
+            <form>
+                <div class="form-horizontal">
+                    <label for="studentName" class="col-sm-2 control-label">Aluno</label>
+                    <div class="col-sm-10"><input type="text" class="form-control" id="inputName" placeholder="Nome">
+                    </div>                            
+                    <label for="workTitle" class="col-sm-2 control-label">Título do Trabalho</label>
+                    <div class="col-sm-10"><textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <label for="date" class="col-sm-2 control-label">Data</label>
+                    <div class="col-sm-3"><input type="date" class="form-control" id="date-apresentacao"></div>
+                    <label for="time" class="col-sm-3 control-label">Horário</label>
+                    <div class="col-sm-3"><input type="time" class="form-control" id="horario"></div>
+
+                    <label class="col-sm-2 control-label" for="roomNumber">Local</label>
+                    <div class="col-sm-4"><input type="text" class="form-control " id="exampleInputName2" placeholder="Numero da Sala"></div>
+                    <label for="building" class="col-sm-2 control-label">Prédio</label>
+                    <div class="col-sm-4"><input type="text" class="form-control" id="exampleInputName2" placeholder="Numero do Prédio"></div>
+                    <div class="col-sm-2"></div>  <div class="checkbox col-sm-10">
+                        <label><input type="checkbox" id="cb-coorientador" value="option1">Coorientador</label>
+                    </div>                                             
+                    <label for="advisor" class="col-sm-2 control-label">Orientador</label>
+                    <div class="col-sm-10"><input type="text" class="form-control" id="inputName" placeholder="Nome"></div>
+
+                    <div id="box-coorientador" class="hidden">
+                        <label class="col-sm-2 control-label ">Coorientador</label>
+                        <div class="col-sm-10"><input type="text" class="form-control" id="inputName" placeholder="Nome"></div>
+                    </div>
+                    <label for="bank1" class="col-sm-2 control-label">Banca 1</label>
+                    <div class="col-sm-10"><input type="text" class="form-control" id="inputName" placeholder="Nome"></div>
+                    <label for="bank2" class="col-sm-2 control-label">Banca 2</label>
+                    <div class="col-sm-10"><input type="text" class="form-control" id="inputName" placeholder="Nome"></div>                         
+                    <div class="col-sm-10"></div><input class="btn btn-default col-sm-2" type="submit" value="Submit">
+                </div>
+
+            </form>
+        </div>
+<% include foot.ejs%>
