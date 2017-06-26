@@ -3,7 +3,7 @@ var connection = mysql.createConnection({
   host: 'localhost',
   database: 'tccBD',
   user: 'root',
-  password: '1',
+    password: 'ROOTROOT',
   multipleStatements: true
 });
 

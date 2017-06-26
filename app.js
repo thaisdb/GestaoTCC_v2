@@ -6,6 +6,11 @@ let db = require('./db');
 let routes = require('./server/routes/index');
 let agendamento = require('./server/routes/agendamento');
 
+let bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
+
 app.set('view engine', 'ejs');
 app.set('views', 'server/views');
 

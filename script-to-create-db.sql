@@ -52,6 +52,26 @@ CREATE TABLE IF NOT EXISTS `tccBD`.`professor` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- Table `tccBD`.`professor`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `tccBD`.`cronograma` ;
+
+CREATE TABLE IF NOT EXISTS `tccBD`.`cronograma` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `descricao` VARCHAR(45) NULL,
+  `ativo` BOOLEAN NOT NULL DEFAULT 1,
+  `dataDefesa`  DATETIME NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
