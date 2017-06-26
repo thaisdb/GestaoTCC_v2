@@ -4,6 +4,7 @@ let fs = require('fs');
 let path = require('path');
 let db = require('./db');
 let routes = require('./server/routes/index');
+let agendamento = require('./server/routes/agendamento');
 
 let bodyParser = require('body-parser');
 
@@ -20,6 +21,7 @@ app.set('views', 'server/views');
 
     app.use(express.static(path.join(__dirname, 'public')));
     app.use('/', routes);
+    app.use('/agendamento', agendamento);
 
 // POST /contato
 //app.post('/contato', function(request, response) {

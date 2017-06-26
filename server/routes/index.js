@@ -14,8 +14,11 @@ router.post('/', function(req, res) {
 });
 
 router.get('/agendamento', function(req, res, next){
-	res.render('agendamento');
+  db.query('SELECT id, nome FROM professor',
+    function(err, professor) {
+      if (err) res.status(500).send('Erro ao recuperar professores.');
+        res.render('agendamento', {professor: professor});
+  });
 });
-
 module.exports = router;
 
