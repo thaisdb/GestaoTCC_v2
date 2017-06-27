@@ -1,5 +1,21 @@
 <% include head.ejs%>
 <div class="container active" id="home">
     <div id='calendar'></div>
+    <div class="container table-responsive">
+		<table class="table table-hover table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>       
+                </tr>
+            </thead>
+            <% for (let i=0; i < cronograma.length; i++){ %>
+                <tr>
+                    <td><%= cronograma[i].data.getDate() %>-<%= cronograma[i].data.getMonth()+1 %>-<%= cronograma[i].data.getFullYear() %></td>
+                    <td><%= cronograma[i].descricao%></td>
+                </tr>
+            <% } %>		
+		</table>
+	</div>
 </div>
 <% include foot.ejs%>

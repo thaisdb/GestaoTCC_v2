@@ -4,7 +4,12 @@ let db = require('../../db');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index');
+    db.query('SELECT data,descricao FROM cronograma',
+            function (err, cronograma) {
+                if (err)
+                    res.status(500).send('Erro ao recuperar professores.');    
+    res.render('index', {cronograma: cronograma});
+            });
 });
 
 router.post('/', function (req, res) {

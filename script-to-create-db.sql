@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `tccBD`.`cronograma` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(45) NULL,
   `ativo` BOOLEAN NOT NULL DEFAULT 1,
-  `dataDefesa`  DATETIME NOT NULL,
+  `data`  DATE NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -78,7 +78,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
 -- -----------------------------------------------------
--- Data for table `zombies`.`person`
+-- Data for table `tccBD`.`professor`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `tccBD`;
@@ -120,4 +120,14 @@ INSERT INTO `tccBD`.`professor` (`id`, `nome`, `ativo`) VALUES (NULL, 'Rogério 
 INSERT INTO `tccBD`.`professor` (`id`, `nome`, `ativo`) VALUES (NULL, 'Sandro Renato Dias', 1);
 INSERT INTO `tccBD`.`professor` (`id`, `nome`, `ativo`) VALUES (NULL, 'Sérgio Ricardo de Souza', 0);
 INSERT INTO `tccBD`.`professor` (`id`, `nome`, `ativo`) VALUES (NULL, 'Silvia Calmon de Albuquerque', 1);
+
+-- -----------------------------------------------------
+-- Data for table `tccBD`.`professor`
+-- -----------------------------------------------------
+
+INSERT INTO `tccBD`.`cronograma` (`id`, `descricao`, `ativo`, `data`) VALUES (NULL, 'Entrega de Formulário de Projeto', 1, '2017-08-09');
+INSERT INTO `tccBD`.`cronograma` (`id`, `descricao`, `ativo`, `data`) VALUES (NULL, 'Data Final de Agendamento de Defesa', 1, '2017-09-25');
+INSERT INTO `tccBD`.`cronograma` (`id`, `descricao`, `ativo`, `data`) VALUES (NULL, 'Data Final Entrega do Trabalho para Banca', 1, '2017-11-10' );
+INSERT INTO `tccBD`.`cronograma` (`id`, `descricao`, `ativo`, `data`) VALUES (NULL, 'Entrega de Trabalho Final', 1, '2017-11-20');
 COMMIT;
+
