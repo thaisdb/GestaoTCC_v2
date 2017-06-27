@@ -1,14 +1,6 @@
 
+document.querySelector('li a[href="'+window.location.pathname+'"]').parentNode.classList.add('active');
 
-function navSection() {
-    event.target.parentNode.classList.add('active');
-    document.getElementById(event.target.dataset.section).classList.add('active');
-}
-
-let nav = document.querySelectorAll('#myNavBar li');
-for (let li of nav) {
-    li.addEventListener('click', navSection);
-}
 
 let coorientador = document.getElementById('cb-coorientador');
 if(coorientador !== null){
