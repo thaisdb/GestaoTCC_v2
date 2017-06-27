@@ -20,6 +20,12 @@ coorientador.addEventListener('click', function () {
 }});
 }
 
+function confirmacao(){ 
+   if (confirm('Tem certeza que quer enviar este formulário?')){ 
+      document.seuformulario.submit() 
+   } 
+} 
+
 var calendar = $('#calendar').fullCalendar({
     selectable: true,
     select: function(start, end, allDay) {

@@ -11,7 +11,7 @@ router.post('/', function (req, res) {
     console.log(req.body);
 });
 
-router.get('/agendamento', function (req, res, next) {
+router.get('/agendamento/', function (req, res, next) {
     db.query('SELECT id, nome FROM professor',
             function (err, professor) {
                 if (err)
@@ -20,10 +20,10 @@ router.get('/agendamento', function (req, res, next) {
             });
 });
 
-router.post('/agendamento', function (req, res) {
+router.post('/agendamento/', function (req, res) {
     let now = new Date;
     let num;
-    console.log(now.getMonth());
+    if(req.body.matricula!==null ){
     if (now.getMonth > 6)
         num = '2-' + now.getFullYear();
     else
@@ -48,6 +48,20 @@ router.post('/agendamento', function (req, res) {
                     console.log('success');
                     res.redirect('/');
                 }
+            });
+        }
+});
+
+router.get('/agenda/', function (req, res, next) {
+        db.query('SELECT dataDefesa, horario, nomeAluno, tituloTrabalho , professor.nome\n\
+                    AS orientador, coorientador, banca1, banca2, local, predio FROM defesa \n\
+                    INNER JOIN professor ON defesa.orientador = professor.id \n\
+                    ORDER BY dataDefesa;',
+            function (err, defesa) {
+                if (err)
+                    res.status(500).send('Erro ao recuperar professores.');
+                console.log(defesa);
+                res.render('agenda', {defesa: defesa});
             });
 });
 

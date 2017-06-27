@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `tccBD`.`defesa` (
   `semestre`CHAR(6) NOT NULL,
   `mat` CHAR(12) NOT NULL,
   `nomeAluno` VARCHAR(45) NOT NULL,
-  `tituloTrabalho` VARCHAR(50) NOT NULL,
+  `tituloTrabalho` VARCHAR(100) NOT NULL,
   `dataDefesa` DATE NOT NULL,
   `horario` TIME NOT NULL, 
   `local` INT NOT NULL,

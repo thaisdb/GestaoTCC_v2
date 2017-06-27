@@ -9,8 +9,9 @@ body{
 }
 
 #logo{
+    z-index: 5;
     position: relative;
-    top: -79px;
+    top: -8px;
 
 }
 
